@@ -15,6 +15,11 @@
   text-decoration: none;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -119,7 +124,7 @@ body {
 
 @media (max-width: 768px) {
   .hero {
-    padding: 1rem 10rem;
+    padding: 1rem 2rem;
   }
 }
 
@@ -160,13 +165,15 @@ body {
 }
 
 .member .box-member {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
 }
 
 .member .box {
   position: relative;
+  width: 260px;
   overflow: hidden;
   border-radius: 20px;
   object-fit: cover;
@@ -224,6 +231,7 @@ body {
 /* about */
 .about {
   min-height: 125vh;
+  margin-top: -20px;
   padding: 3rem 3rem;
   background: linear-gradient(to right, #050505, #220000, #050505);
 }
@@ -381,6 +389,30 @@ body {
   }
 }
 
+@media (max-width: 350px) {
+  .about {
+    padding: 2rem 1rem;
+  }
+
+  .about .box-about {
+    padding: 1rem;
+    gap: 20px;
+  }
+
+  .about .desc h2 {
+    font-size: 22px;
+  }
+
+  .about .desc p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .about .box-about img {
+    width: 150px;
+  }
+}
+
 /* footer */
 footer {
   display: flex;
@@ -418,6 +450,12 @@ footer .socials a {
 @media (max-width: 466px) {
   footer .copy p {
     font-size: 90%;
+  }
+}
+
+@media (max-width: 350px) {
+  footer .copy p {
+    font-size: 60%;
   }
 }
 
