@@ -34,3 +34,27 @@ window.onscroll = () => {
     scrollUp.classList.remove("scroll-active");
   }
 };
+
+// togle class active
+const navbarNav = document.querySelector(".nav-link");
+// ketika humbarger menu di klik
+document.querySelector("#menu").onclick = () => {
+  navbarNav.classList.toggle("active");
+};
+
+// klik diluar sidebar
+const hamburger = document.querySelector("#menu");
+document.addEventListener("click", function (e) {
+  if (!hamburger.contains(e.target) && !navbarNav.contains(e.target)) {
+    navbarNav.classList.remove("active");
+  }
+});
+
+// alert
+function tutup() {
+  document.getElementById("pop-up").style.display = "none";
+}
+
+window.onload = function () {
+  document.getElementById("pop-up").style.display = "block";
+};
