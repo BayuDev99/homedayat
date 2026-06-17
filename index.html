@@ -15,11 +15,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <!-- aos -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- type.js -->
+    <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
 </head>
 
-<body id="menu">
+<body id="top">
     <!-- scroll up start-->
-    <a href="#menu" class="scroll-up"><i class="bi bi-arrow-up"></i></a>
+    <a href="#top" class="scroll-up"><i class="bi bi-arrow-up"></i></a>
     <!-- scroll up end -->
 
     <!-- navbar start -->
@@ -29,15 +31,18 @@
             <a href="#member">Members</a>
             <a href="#about">About</a>
         </div>
+        <div class="nav-logo">
+            <a href="#" id="menu"><i class="bi bi-list"></i></a>
+        </div>
     </nav>
     <!-- navbar end -->
 
     <!-- hero start -->
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="container">
             <div class="box-hero">
                 <img src="./img/icon/icon.jpeg" alt="icon">
-                <h1>RumahHome<span>Azka</span></h1>
+                <h1>RumahHome<span id="type"></span></h1>
                 <p>We Are RumahHomeAzka</p>
                 <div class="btn-hero">
                     <a href="#member">Explore</a>
@@ -90,6 +95,7 @@
         </div>
     </section>
     <!-- members end -->
+    <!--   -->
     <!-- about start -->
     <section class="about" id="about">
         <h1 data-aos="fade-up">About</h1>
@@ -122,6 +128,23 @@
         </div>
     </footer>
     <!-- footer end -->
+    <!-- Pop Up Start -->
+    <div id="pop-up">
+        <h3>Update <span>Fitur</span></h3>
+        <ul>
+            <li>
+                <p>Menambahkan SideBar Menu ( Mobile )</p>
+
+            </li>
+            <li>
+                <p>Menambahkan Type Js</p>
+            </li>
+        </ul>
+        <div class="btn-area">
+            <button onclick="tutup()">Ok</button>
+        </div>
+    </div>
+    <!-- Pop Up End -->
     <!-- js lenis -->
     <script src="https://unpkg.com/lenis@1.3.1/dist/lenis.min.js"></script>
     <!-- aos -->
@@ -129,6 +152,16 @@
     <script>
         AOS.init({
             once: true
+        });
+    </script>
+    <!-- type.js -->
+    <script>
+        var typed = new Typed('#type', {
+            strings: ['Azka'],
+            typeSpeed: 150,
+            loop: true,
+            backSpeed: 100,
+            showCursor: true,
         });
     </script>
     <!-- js -->
