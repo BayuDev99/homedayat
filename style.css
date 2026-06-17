@@ -50,6 +50,53 @@ body {
   color: var(--red);
 }
 
+.navbar .nav-logo {
+  display: none;
+  margin-left: auto;
+}
+
+.navbar .nav-logo a {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+@media (max-width: 450px) {
+  .navbar .nav-logo {
+    display: inline-block;
+    position: fixed;
+    padding: 2rem;
+    right: 0px;
+    top: 0px;
+    z-index: 9999;
+  }
+
+  .navbar .nav-link {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    top: 70px;
+    right: -100%;
+    background-color: #fff;
+    width: 50%;
+    height: 50vh;
+    z-index: 9999;
+    transition: 0.3s;
+    box-shadow: var(--shadow);
+  }
+
+  .navbar .nav-link a {
+    color: var(--bg);
+    text-align: center;
+  }
+
+  .navbar .nav-link.active {
+    right: 0;
+  }
+}
+
 @media (max-width: 400px) {
   .navbar .nav-link a {
     font-size: 14px;
@@ -480,5 +527,73 @@ footer .socials a {
 @media (max-width: 768px) {
   .scroll-up {
     right: 30px;
+  }
+}
+
+/* pop up */
+#pop-up {
+  position: fixed;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #010101;
+  padding: 1.4rem 7%;
+  border-radius: 15px;
+  z-index: 9999;
+  animation: pop-up 3s ease-in-out infinite;
+}
+
+@keyframes pop-up {
+  0% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) translateY(-10px);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+}
+
+#pop-up h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#pop-up h3 span {
+  color: var(--gold);
+  box-shadow: var(--shadow);
+}
+
+#pop-up p {
+  letter-spacing: 1px;
+  margin-top: 1rem;
+}
+
+#pop-up .btn-area {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+#pop-up .btn-area button {
+  padding: 1.4rem 7%;
+  border-radius: 10px;
+  color: var(--bg);
+  background: #fff;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+
+@media (max-width: 400px) {
+  #pop-up {
+    width: 60%;
+  }
+
+  #pop-up .btn-area button {
+    width: 50%;
   }
 }
