@@ -593,6 +593,10 @@ footer .socials a {
     width: 60%;
   }
 
+  #pop-up p span {
+    display: none;
+  }
+
   #pop-up .btn-area button {
     width: 50%;
   }
