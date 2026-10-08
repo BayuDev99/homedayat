@@ -242,7 +242,6 @@ body {
 .member .desc {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to rgba(0, 0, 0, 0.9), transparent);
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -580,12 +579,17 @@ footer .socials a {
 }
 
 #pop-up .btn-area button {
-  padding: 1.4rem 7%;
+  padding: 10px;
   border-radius: 10px;
   color: var(--bg);
   background: #fff;
   box-shadow: var(--shadow);
   cursor: pointer;
+}
+
+#pop-up .btn-area button:hover {
+  background-color: #7a0000;
+  transition: 0.2s ease-in-out;
 }
 
 @media (max-width: 400px) {
@@ -595,9 +599,5 @@ footer .socials a {
 
   #pop-up p span {
     display: none;
-  }
-
-  #pop-up .btn-area button {
-    width: 50%;
   }
 }
